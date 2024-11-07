@@ -42,7 +42,9 @@ The study relies on the following datasets:
 
 The study involves multiple regions for training and testing the correction model. The image below shows the regions where the model was trained and tested:
 
-![Training and Testing Regions](images/study_domain.png)
+<img src="images/study_domain" alt="Training and Testing Regions" width="600"/>
+
+
 
 ## Methodology
 The model flow is shown in the diagram below:
@@ -67,6 +69,10 @@ The forecasting model was evaluated with recall, F1 score, and balanced accuracy
 - **Correction Effectiveness**: The correction model reduced CAMS PM10 error by an average of 12 µg/m³ across unseen regions.
 - **Forecast Improvement**: The dust forecast model, trained on corrected PM10 fields, achieved an 11 percentage-point improvement in 18-hour recall and 5 percentage points in F1 score for forecasts up to 48 hours.
 - **Bias Insights**: CAMS PM10 biases were found to correlate with seasonal, regional, and environmental factors like NDVI, surface winds, and aerosol optical depth (AOD).
+- 
+The correction model significantly reduces PM10 error compared to uncorrected CAMS data. The following image compares model predictions with and without correction:
+
+![Correction Comparison](images/correction_examples_panel.png)
 
 ## Usage
 
