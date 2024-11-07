@@ -40,6 +40,10 @@ The study relies on the following datasets:
 3. **Meteorological and Atmospheric Data**: ERA5 reanalysis data including variables like geopotential height, specific humidity, and temperature at various pressure levels.
 4. **Satellite Data**: NDVI data from Sentinel-2, interpolated to match the CAMS PM10 spatial resolution.
 
+The study involves multiple regions for training and testing the correction model. The image below shows the regions where the model was trained and tested:
+
+![Training and Testing Regions](images/study_domain.png)
+
 ## Methodology
 The model flow is shown in the diagram below:
 
