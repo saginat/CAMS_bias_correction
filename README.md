@@ -42,7 +42,7 @@ The study relies on the following datasets:
 
 The study involves multiple regions for training and testing the correction model. The image below shows the regions where the model was trained and tested:
 
-<img src="images/study_domain" alt="Training and Testing Regions" width="600"/>
+<img src="images/study_domain.png" alt="Training and Testing Regions" width="600"/>
 
 
 
