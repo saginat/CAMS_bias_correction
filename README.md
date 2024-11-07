@@ -73,7 +73,7 @@ The forecasting model was evaluated with recall, F1 score, and balanced accuracy
 The correction model significantly reduces PM10 error compared to uncorrected CAMS data. The following image compares model predictions with and without correction:
 
 
-<img src="images/correction_examples_panel.png" alt="Correction Comparison" width="600"/>
+<img src="images/correction_examples_panel.png" alt="Correction Comparison" width="800"/>
 
 
 ## Usage
