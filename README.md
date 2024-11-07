@@ -42,7 +42,7 @@ The study relies on the following datasets:
 
 The study involves multiple regions for training and testing the correction model. The image below shows the regions where the model was trained and tested:
 
-<img src="images/study_domain.png" alt="Training and Testing Regions" width="600"/>
+<img src="images/study_domain.png" alt="Training and Testing Regions" width="400"/>
 
 
 
@@ -71,8 +71,8 @@ The forecasting model was evaluated with recall, F1 score, and balanced accuracy
 - **Bias Insights**: CAMS PM10 biases were found to correlate with seasonal, regional, and environmental factors like NDVI, surface winds, and aerosol optical depth (AOD).
 - 
 The correction model significantly reduces PM10 error compared to uncorrected CAMS data. The following image compares model predictions with and without correction:
+<img src="images/correction_examples_panel.png" alt="Correction Comparison" width="400"/>
 
-![Correction Comparison](images/correction_examples_panel.png)
 
 ## Usage
 
