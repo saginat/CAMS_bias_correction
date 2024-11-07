@@ -71,7 +71,9 @@ The forecasting model was evaluated with recall, F1 score, and balanced accuracy
 - **Bias Insights**: CAMS PM10 biases were found to correlate with seasonal, regional, and environmental factors like NDVI, surface winds, and aerosol optical depth (AOD).
 - 
 The correction model significantly reduces PM10 error compared to uncorrected CAMS data. The following image compares model predictions with and without correction:
-<img src="images/correction_examples_panel.png" alt="Correction Comparison" width="400"/>
+
+
+<img src="images/correction_examples_panel.png" alt="Correction Comparison" width="600"/>
 
 
 ## Usage
