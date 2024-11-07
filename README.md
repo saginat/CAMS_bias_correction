@@ -76,39 +76,6 @@ The correction model significantly reduces PM10 error compared to uncorrected CA
 <img src="images/correction_examples_panel.png" alt="Correction Comparison" width="800"/>
 
 
-## Usage
-
-To reproduce the results of this study, follow these steps:
-
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/yourusername/CAMS_bias_correction.git
-   cd CAMS_bias_correction
-   ```
-
-2. **Install dependencies**:
-   Ensure you have Python installed, then install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Download and Prepare Data**:
-   - Download PM10 in-situ data, CAMS reanalysis, ERA5 reanalysis, and NDVI datasets (see [Data Availability](#data-availability) for links).
-   - Use the data preprocessing scripts provided in `scripts/preprocess_data.py` to align spatial and temporal resolutions as necessary.
-
-4. **Run the Correction Model**:
-   ```bash
-   python scripts/run_correction_model.py
-   ```
-
-5. **Train the Dust Forecast Model**:
-   ```bash
-   python scripts/run_forecasting_model.py
-   ```
-
-6. **Evaluate the Models**:
-   Use `scripts/evaluate.py` to compute metrics like recall, F1 score, and balanced accuracy.
-
 ## Data Availability
 
 All data used in this study is publicly accessible:
@@ -118,22 +85,7 @@ All data used in this study is publicly accessible:
 - **ERA5 Reanalysis**: [https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels)
 - **NDVI Data**: [https://lpdaac.usgs.gov/products/mod13a2v006/](https://lpdaac.usgs.gov/products/mod13a2v006/)
 
-## Citation
 
-If you find this repository helpful, please consider citing our paper:
-
-```bibtex
-@article{sarafian2024cams,
-  title={Correction of CAMS PM10 Reanalysis Improves AI-Based Dust Event Forecast},
-  author={Sarafian, Ron and Nathan, Sagi and Nissenbaum, Dori and Rudich, Yinon},
-  journal={Journal of Atmospheric and Environmental Sciences},
-  year={2024}
-}
-```
-
-## License
-
-This repository is licensed under the MIT License.
 
 ---
 
