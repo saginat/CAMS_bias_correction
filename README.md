@@ -41,7 +41,9 @@ The study relies on the following datasets:
 4. **Satellite Data**: NDVI data from Sentinel-2, interpolated to match the CAMS PM10 spatial resolution.
 
 ## Methodology
+The model flow is shown in the diagram below:
 
+![Model Flow](images/architecture1.png)
 The workflow consists of two main stages:
 
 ### 1. Correction Model
