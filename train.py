@@ -59,10 +59,10 @@ def train(
         
         predictions_train = np.concatenate(y_pred_train).reshape(-1, num_stations).flatten()
         ground_truth_train = np.concatenate(y_true_train).reshape(-1, num_stations).flatten()
-        acc, prc, rcl, prcrcl_ratio, prcrcl_avg, csi = get_metrics_binar(
+        acc, prc, rcl, prcrcl_ratio, prcrcl_avg, f1 = get_metrics_binar(
             ground_truth_train, predictions_train, labels=[1, 2], smallest_event_level=smallest_event_level
         )
-        train_f1_scores.append(csi)
+        train_f1_scores.append(f1)
 
         # Validation loop
         net.eval()
@@ -89,10 +89,10 @@ def train(
         
         predictions_valid = np.concatenate(y_pred_valid).reshape(-1, num_stations).flatten()
         ground_truth_valid = np.concatenate(y_true_valid).reshape(-1, num_stations).flatten()
-        acc_test, prc_test, rcl_test, prcrcl_ratio_test, prcrcl_avg_test, csi_test = get_metrics_binar(
+        acc_test, prc_test, rcl_test, prcrcl_ratio_test, prcrcl_avg_test, f1_test = get_metrics_binar(
             ground_truth_valid, predictions_valid, labels=[1, 2], smallest_event_level=smallest_event_level
         )
-        valid_f1_scores.append(csi_test)
+        valid_f1_scores.append(f1_test)
         
         # Step the scheduler
         scheduler.step(valid_loss)
@@ -101,6 +101,6 @@ def train(
         if verbose:
             print(f'Epoch [{epoch + 1}/{num_epochs}] - Train Loss: {train_loss:.4f}, Valid Loss: {valid_loss:.4f}')
             print(f'Train acc {acc:.3f}, precision {prc:.3f}, recall {rcl:.3f}, CSI {csi:.3f}, avg {prcrcl_avg:.3f}')
-            print(f'Validation acc {acc_test:.3f}, precision {prc_test:.3f}, recall {rcl_test:.3f}, CSI {csi_test:.3f}, avg {prcrcl_avg_test:.3f}')
+            print(f'Validation acc {acc_test:.3f}, precision {prc_test:.3f}, recall {rcl_test:.3f}, F1 {f1_test:.3f}, avg {prcrcl_avg_test:.3f}')
 
     return net, train_running_loss, validation_running_loss
