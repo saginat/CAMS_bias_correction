@@ -38,7 +38,7 @@ The study relies on the following datasets:
 1. **PM10 Ground Measurements**: In-situ PM10 data from 657 monitoring stations across Turkey and the Balkan Peninsula, covering 2013-2020.
 2. **CAMS PM10 Reanalysis**: PM10 atmospheric composition from the EAC4 reanalysis dataset by CAMS, with a spatial resolution of 0.75° x 0.75°.
 3. **Meteorological and Atmospheric Data**: ERA5 reanalysis data including variables like geopotential height, specific humidity, and temperature at various pressure levels.
-4. **Satellite Data**: NDVI data from Sentinel-2, interpolated to match the CAMS PM10 spatial resolution.
+4. **Satellite Data**: NDVI data from MOD13A2, interpolated to match the CAMS PM10 spatial resolution.
 
 The study involves multiple regions for training and testing the correction model. The image below shows the regions where the model was trained and tested:
 
